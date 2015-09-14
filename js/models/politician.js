@@ -398,6 +398,9 @@ var PoliticiansStateFilter = Composer.FilterCollection.extend({
     state: 'MA',
 
     filter: function(model) {
+        if (this.state == "ALL"){
+          return true;
+        }
         return model.get('state_short') == this.state;
     }
 });
