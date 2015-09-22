@@ -6,6 +6,7 @@ var Politician = Composer.Model.extend({
 
         var e = function(field) { return entry['gsx$'+field]['$t'].trim(); };
 
+
         this.set({
             first_name:      e('first'),
             last_name:       e('name'),
@@ -44,7 +45,7 @@ var Politician = Composer.Model.extend({
             office8:         e('office8'),
             office8phone:    e('office8phone'),
             office8geo:      e('office8geo'),
-
+            urban_rural:     e('urban-rural'),
             // meta field
             score: 0,
             score_criteria: [],
@@ -383,13 +384,13 @@ var Politician = Composer.Model.extend({
 **/
 var Politicians = Composer.Collection.extend({
     sortfn: function(a, b) {
-        
+
         if (a.get('last_name') < b.get('last_name'))
             return -1;
         if (a.get('last_name') > b.get('last_name'))
             return 1;
         return 0;
-            
+
     },
 });
 
