@@ -391,9 +391,6 @@ var Politician = Composer.Model.extend({
         else if(score >= -9){
             var grade="D-"
         }
-        else if (this.get('last_name') == 'McConnell'){
-            var grade="F-"
-        }
         else{
             var grade="F"
         }
