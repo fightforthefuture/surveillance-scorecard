@@ -1,6 +1,7 @@
 var SPREADSHEET_URL = 'https://spreadsheets.google.com/feeds/list/1rTzEY0sEEHvHjZebIogoKO1qfTez2T6xNj0AScO6t24/default/public/values?alt=json';
 
 var STATES = {
+    'ALL':'All',
     'AL': 'Alabama',
     'AK': 'Alaska',
     'AZ': 'Arizona',
